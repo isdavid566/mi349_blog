@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title>Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        form { max-width: 400px;}
+        form { max-width: 400px; margin: auto; }
         label { display: block; margin-top: 1em; }
         input, textarea { width: 100%; padding: 0.5em; margin-top: 0.5em; }
         button { margin-top: 1em; padding: 0.5em 1em; }
     </style>
 </head>
 <body>
-    <h1>Contact Me</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
-    <form name="contact" netlify>
+    <header>
+        <h1>Contact</h1>
+            <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <form action="#" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -27,16 +29,16 @@
 
         <label for="reason">Reason for Contact:</label>
         <select id="reason" name="reason" required>
-            <option value="">Please choose an option</option>
+            <option value="">Select a reason</option>
             <option value="inquiry">Saying Hi</option>
-            <option value="feedback">Looking for a contractor</option>
-            <option value="support">Interested in an interview</option>
+            <option value="support">Looking for a contractor</option>
+            <option value="feedback">Interested in an interview</option>
         </select>
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
