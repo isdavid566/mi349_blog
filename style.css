@@ -1,17 +1,20 @@
 html, body {
   width: 100%;
-  overflow-x: hidden;
 }
 
 body {
   margin: 0px;
   background-color: lightyellow;
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* typography */
 h1 {
    margin: 0;
    color:#4e2d3c;
+   font-family: "Henny Penny", system-ui;
 }
 
 h2 {
@@ -21,8 +24,7 @@ h2 {
 }
 
 p {
-  margin: 20px;
-  margin-right: 50px;
+  margin: 10px 20px;
   color: #4e2d3c
 }
 
@@ -39,21 +41,23 @@ address {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: url("gingham.jpg");
+  background-image: url("gingham-green.png");
   background-size: cover;
   background-position: center;
   height: 150px;
+  padding-right: 20%;
 }
 
 .header > .header-box {
-  float: right;
-  margin-right: 20%;
-  margin-top: 4%;
+  margin-top: 70px;
+  width: 400px;
   height: 100px;
-  width: 300px;
   background-color: white;
   border: 4px solid #D95A4B;
   align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-box > h1 {
@@ -73,6 +77,7 @@ address {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    z-index: 1000;
 }
 
 .topnav a {
@@ -103,7 +108,9 @@ table {
 /* main content */
 .container {
   display: flex;
+  flex-wrap: start;
   justify-content: space-evenly;
+  gap: 20px;
   margin: 20px 30px 20px 30px;
 }
 
@@ -127,7 +134,6 @@ table {
   background-color: #ffffff;
   padding: 15px;
   width: 210px;
-  height: 100px;
   margin-bottom: 20px;
   color: #4e2d3c;
   text-align: center;
@@ -172,9 +178,10 @@ table {
 }
 
 /* sidebar contents */
-
 .sidebar-contents {
-  width: 200px;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
 }
 
 .sidebar-contents > h2 {
@@ -189,25 +196,30 @@ table {
   margin: 0;
 }
 
-.top-songs {
+.recently {
   width: 100%;
   margin: 0;
 }
 
-.top-songs h2 {
+.recently p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.recently h2 {
   margin-top: 0;
   color: #D95A4B;
   text-align: left;
   font-size: 24px;
 }
 
-.top-songs ul {
+.recently ul {
   list-style-type: none;
   padding-left: 0;
   margin: 10px 0 0 0;
 }
 
-.top-songs li {
+.recently li {
   margin-bottom: 10px;
   word-wrap: break-word;
   font-size: 18px;
@@ -215,9 +227,22 @@ table {
 
 .container > .sidebar > .sidebar-contents > div {
   background-color: #FCDFD9;
-  height: 250px;
+  min-height: 100px;
   margin-bottom: 10px;
   padding: 5px;
+  box-sizing: border-box;
+}
+
+.sidebar-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("gingham.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  max-height: 500px;
+  padding-right: 20%;
 }
 
 /* blog post content */
@@ -231,22 +256,19 @@ table {
   color: #D95A4B;
 }
 
-.blog-post > p {
-  color: #4e2d3c;
-}
-
-.about-image {
-  margin: 0 0 10px 10px;
-  border: 3px solid #D95A4B;
-}
-
 .blog-post > img {
   float: right;
+  border: 3px solid #D95A4B;
+  margin: 0 0 10px 20px;
 }
 
 .meta {
   color: #627427;
   padding-bottom: 10px;
+}
+
+.about-image {
+  border: 3px solid #D95A4B;
 }
 
 .blog-image {
@@ -289,12 +311,10 @@ tr:nth-child(even) {
 /* dividers */
 hr.dotted {
   border-top: 3px dotted #D95A4B;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
 }
 
 /* newsletter / footer */
-
 .newsletter {
   background-color: #FCDFD9;
   color: #4e2d3c;
@@ -310,6 +330,7 @@ hr.dotted {
 
 .newsletter h2 {
   padding-top: 30px;
+  font-family: "Henny Penny", system-ui;
 }
 
 /* form */
@@ -319,7 +340,6 @@ form {
   padding: 20px;
   border: 3px solid #CEE386;
   background-color: #FCDFD9; 
-  border-radius: 10px;
   box-sizing: border-box;
   font-family: Georgia, serif;
   color: #4e2d3c;
@@ -330,6 +350,7 @@ label {
   margin-top: 1em;
   font-weight: bold;
   color: #D95A4B;
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 input, textarea {
