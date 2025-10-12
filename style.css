@@ -1,5 +1,6 @@
 html, body {
   width: 100%;
+  height: 100%;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   font-family: "Georgia", "Times New Roman", serif;
   line-height: 1.6;
   overflow-x: hidden;
+  color: #4e2d3c
 }
 
 /* typography */
@@ -19,17 +21,11 @@ h1 {
 
 h2 {
   text-align: center;
-  margin: 0px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 p {
   margin: 10px 20px;
-  color: #4e2d3c
-}
-
-ul {
-  color: #4e2d3c;
 }
 
 address {
@@ -54,15 +50,12 @@ address {
   height: 100px;
   background-color: white;
   border: 4px solid #D95A4B;
-  align-content: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .header-box > h1 {
-  display: inline;
-  background-color: white;
   padding: 10px;
   text-align: center;
   font-size: 40px;
@@ -70,18 +63,20 @@ address {
 
 /* navigation bar */
 .topnav {
-    background-color:#D95A4B;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    z-index: 1000;
+  background-color:#D95A4B;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 5px;
+  z-index: 1000;
 }
 
 .topnav a {
-  float: left;
   color: #4e2d3c;
   text-align: center;
   padding: 14px 16px;
@@ -109,9 +104,11 @@ table {
 .container {
   display: flex;
   flex-wrap: start;
+  align-items: stretch;
   justify-content: space-evenly;
   gap: 20px;
-  margin: 20px 30px 20px 30px;
+  margin: 20px 30px;
+  min-height: 100vh;
 }
 
 .container > div {
@@ -121,20 +118,22 @@ table {
   font-size: 20px;
 }
 
-.container > .sidebar {
-  background-color: rgb(255, 255, 255);
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
   border: 3px solid #CEE386;
-  margin-left: 0;
-  padding: 20px;
-  padding-right: 30px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  flex: 0 0 250px;
+  height: auto;
 }
 
 /* new box */
 .new-box {
   background-color: #ffffff;
   padding: 15px;
-  width: 210px;
-  margin-bottom: 20px;
+  width: 100%;
   color: #4e2d3c;
   text-align: center;
   box-sizing: border-box;
@@ -142,7 +141,7 @@ table {
 
 .new-header {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .new-bubble {
@@ -150,10 +149,13 @@ table {
   color: #4e2d3c;
   font-weight: bold;
   border-radius: 50%;
-  padding: 6px 10px;
-  margin: 0 2px;
+  margin: 0px;
+  width: 30px;
+  height: 30px;
   font-size: 16px;
   display: inline-block;
+  justify-content: center;
+  align-content: center;
 }
 
 .new-content {
@@ -162,32 +164,39 @@ table {
 
 .new-content p {
   margin: 0;
-  color: #4e2d3c;
-  font-size: 16px;
+  font-size: 18px;
+  text-align: left;
 }
 
-.new-content strong {
+strong {
   color: #D95A4B;
 }
 
-.new-box hr {
-  border: none;
-  border-top: 2px solid #D95A4B;
-  margin: 4px auto 15px;
-  width: 80%;
+.line {
+    width: 100%; 
+    border-bottom: 2px solid #D95A4B; 
+    margin: -8px 0 10px 0;
 }
 
 /* sidebar contents */
+
 .sidebar-contents {
-  width: 100%;
-  max-width: 250px;
-  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .sidebar-contents > h2 {
   text-align: left;
-  font-size: 26px;
+  font-size: 20px;
   color: #4e2d3c;
+}
+
+.sidebar-contents > p {
+  margin: 0;
+  font-size: 18px;
+  flex-shrink: 0;
 }
 
 .sidebar-contents > ul {
@@ -210,7 +219,7 @@ table {
   margin-top: 0;
   color: #D95A4B;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .recently ul {
@@ -220,35 +229,34 @@ table {
 }
 
 .recently li {
+  list-style-type: disc;
+  list-style-position: inside;
   margin-bottom: 10px;
   word-wrap: break-word;
   font-size: 18px;
+  line-height: 1.3;
 }
 
 .container > .sidebar > .sidebar-contents > div {
   background-color: #FCDFD9;
   min-height: 100px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   padding: 5px;
   box-sizing: border-box;
 }
 
 .sidebar-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-image: url("gingham.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  max-height: 500px;
-  padding-right: 20%;
+  flex: 1 1 auto;
+  width: 100%; 
+  background: url("gingham.jpg") center / cover no-repeat;
+  border-top: 3px solid #D95A4B;
+  margin-top: 10px;
+  box-sizing: border-box;
 }
 
 /* blog post content */
 .blog-post {
-    margin-left: 20px;
-    margin-right: 20px;
+  margin: 0px 20px 0px 20px;
 }
 
 .blog-post > h2 {
@@ -267,7 +275,17 @@ table {
   padding-bottom: 10px;
 }
 
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px;
+}
+
 .about-image {
+  float: right;
+  width: 300px;
+  height: 300px;
   border: 3px solid #D95A4B;
 }
 
@@ -275,7 +293,6 @@ table {
   float: right;
   margin: 0 0 10px 20px;
   border: 3px solid #D95A4B;
-  overflow: hidden;
   max-width: 300px;
   background-color: #ffffff;
 }
@@ -311,15 +328,14 @@ tr:nth-child(even) {
 /* dividers */
 hr.dotted {
   border-top: 3px dotted #D95A4B;
-  margin: 20px;
+  margin: 5px;
 }
 
 /* newsletter / footer */
 .newsletter {
-  background-color: #FCDFD9;
+  background-color: #CEE386;
   color: #4e2d3c;
-  padding: 10px;
-  padding-bottom: 40px;
+  padding: 10px 10px 40px 10px;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -358,4 +374,19 @@ input, textarea {
   padding: 0.6em 0.2em;
   margin-top: 0.5em;
   border: 2px solid #CEE386;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content form {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
