@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,72 +10,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <title>Contact</title>
 </head>
+
 <body>
+    <!-- topnav -->
     <div class="topnav">
         <nav>
             <a href="index.html">lately</a>
             <a href="about.html">about</a>
             <a class="active" href="#contact">contact me!</a>
-        </nav>  
+        </nav>
     </div>
     <div class="header">
-        <div class="header-box">
+        <header id="header-box">
             <h1>contact me!</h1>
         </div>
     </div>
-<div class="container">
-    <!-- sidebar -->
-    <div class="sidebar">
-        <div class="sidebar-contents">
-            <div class="new-box">
-                <div class="new-header">
-                    <span class="new-bubble">N</span>
-                    <span class="new-bubble">E</span>
-                    <span class="new-bubble">W</span>
-                    <span class="new-text">on the blog</span>
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-contents">
+                <div class="new-box">
+                    <div class="new-header">
+                        <span class="new-bubble">N</span>
+                        <span class="new-bubble">E</span>
+                        <span class="new-bubble">W</span>
+                        <span class="new-text">on the blog</span>
+                    </div>
+                    <div class="line"></div>
+                    <div class="new-content">
+                        <p><strong>New posts!</strong> New CSS theme</p>
+                    </div>
                 </div>
-                <div class="line"></div>
-                <div class="new-content">
-                    <p><strong>New posts!</strong> New CSS theme</p>
+                <hr class="dotted">
+                <h2>Recently:</h2>
+                <div class="recently">
+                    <h2>On Repeat</h2>
+                    <ul>
+                        <li>What am I supposed to do - Chocolate</li>
+                        <li>Ice Cream - f(x)</li>
+                        <li>Show! Show! Show! - 소녀시대</li>
+                        <li>Ring Ring Ring - Tyler, the Creator</li>
+                        <li>Superstar - Nana Lourdes</li>
+                    </ul>
                 </div>
             </div>
-            <hr class="dotted">
-            <h2>Recently:</h2>
-            <div class="recently">
-                <h2>On Repeat</h2>
-                <ul>
-                    <li>What am I supposed to do - Chocolate</li>
-                    <li>Ice Cream - f(x)</li>
-                    <li>Show! Show! Show! - 소녀시대</li>
-                    <li>Ring Ring Ring - Tyler, the Creator</li>
-                    <li>Superstar - Nana Lourdes</li>
-                </ul>
-            </div>
+            <div class="sidebar-image"></div>
         </div>
-        <div class="sidebar-image"></div>
+
+        <!-- contact form -->
+        <div class="main-content">
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="reason">Reason for Contact:</label>
+                <select id="reason" name="reason" required>
+                    <option value="">Select a reason</option>
+                    <option value="inquiry">Saying Hi</option>
+                    <option value="support">Looking for a contractor</option>
+                    <option value="feedback">Interested in an interview</option>
+                </select>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-
-    <!-- coontact form -->
-    <div class="main-content">
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="reason">Reason for Contact:</label>
-            <select id="reason" name="reason" required>
-                <option value="">Select a reason</option>
-                <option value="inquiry">Saying Hi</option>
-                <option value="support">Looking for a contractor</option>
-                <option value="feedback">Interested in an interview</option>
-            </select>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</div>
 </body>
+
 </html>

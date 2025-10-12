@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -14,14 +15,15 @@ body {
 
 /* typography */
 h1 {
-   margin: 0;
-   color:#4e2d3c;
-   font-family: "Henny Penny", system-ui;
+  margin: 0;
+  color: #4e2d3c;
+  font-family: "Henny Penny", system-ui;
 }
 
 h2 {
   text-align: center;
   margin: 0 0 10px;
+  font-size: 30px;
 }
 
 p {
@@ -29,7 +31,7 @@ p {
 }
 
 address {
-  display:inline;
+  display: inline;
 }
 
 /* header */
@@ -44,7 +46,7 @@ address {
   padding-right: 20%;
 }
 
-.header > .header-box {
+#header-box {
   margin-top: 70px;
   width: 400px;
   height: 100px;
@@ -55,7 +57,7 @@ address {
   align-items: center;
 }
 
-.header-box > h1 {
+.header-box>h1 {
   padding: 10px;
   text-align: center;
   font-size: 40px;
@@ -63,17 +65,16 @@ address {
 
 /* navigation bar */
 .topnav {
-  background-color:#D95A4B;
+  background-color: #D95A4B;
   overflow: hidden;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 5px;
   z-index: 1000;
+  font-size: 0;
 }
 
 .topnav a {
@@ -82,6 +83,7 @@ address {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
+  margin: 0;
 }
 
 .topnav a:hover {
@@ -108,10 +110,11 @@ table {
   justify-content: space-evenly;
   gap: 20px;
   margin: 20px 30px;
+  padding: 40px 0px;
   min-height: 100vh;
 }
 
-.container > div {
+.container>div {
   background-color: #ffffff;
   margin: 10px;
   padding: 10px;
@@ -173,13 +176,12 @@ strong {
 }
 
 .line {
-    width: 100%; 
-    border-bottom: 2px solid #D95A4B; 
-    margin: -8px 0 10px 0;
+  width: 100%;
+  border-bottom: 2px solid #D95A4B;
+  margin: -8px 0 10px 0;
 }
 
 /* sidebar contents */
-
 .sidebar-contents {
   flex: 0 0 auto;
   display: flex;
@@ -187,19 +189,20 @@ strong {
   gap: 10px;
 }
 
-.sidebar-contents > h2 {
+.sidebar-contents>h2 {
   text-align: left;
   font-size: 20px;
   color: #4e2d3c;
+  margin: 0;
 }
 
-.sidebar-contents > p {
+.sidebar-contents>p {
   margin: 0;
   font-size: 18px;
   flex-shrink: 0;
 }
 
-.sidebar-contents > ul {
+.sidebar-contents>ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
@@ -237,18 +240,18 @@ strong {
   line-height: 1.3;
 }
 
-.container > .sidebar > .sidebar-contents > div {
+.container>.sidebar>.sidebar-contents>div {
   background-color: #FCDFD9;
   min-height: 100px;
-  margin-top: 10px;
   padding: 5px;
   box-sizing: border-box;
 }
 
 .sidebar-image {
   flex: 1 1 auto;
-  width: 100%; 
-  background: url("gingham.jpg") center / cover no-repeat;
+  width: 100%;
+  background: url("gingham.jpg");
+  background-repeat: repeat-y;
   border-top: 3px solid #D95A4B;
   margin-top: 10px;
   box-sizing: border-box;
@@ -259,12 +262,12 @@ strong {
   margin: 0px 20px 0px 20px;
 }
 
-.blog-post > h2 {
+.blog-post>h2 {
   text-align: left;
   color: #D95A4B;
 }
 
-.blog-post > img {
+.blog-post>img {
   float: right;
   border: 3px solid #D95A4B;
   margin: 0 0 10px 20px;
@@ -314,7 +317,8 @@ strong {
   line-height: 1.3;
 }
 
-td, th {
+td,
+th {
   border: 2px solid #FCDFD9;
   text-align: left;
   padding: 8px;
@@ -335,13 +339,21 @@ hr.dotted {
 .newsletter {
   background-color: #CEE386;
   color: #4e2d3c;
-  padding: 10px 10px 40px 10px;
+  padding: 10px 10px 20px 10px;
   left: 0;
   bottom: 0;
+  margin: 0 auto;
   width: 100%;
-  mask: 
-    linear-gradient(180deg,#0000 30px,#000 0),
-    radial-gradient(30px,#000 calc(100% - 1px),#0000) top/55.5px 60px;
+  mask:
+    linear-gradient(180deg, #0000 30px, #000 0),
+    radial-gradient(30px, #000 calc(100% - 1px), #0000) top/55.5px 60px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  padding: 0.6em 0.2em;
+  width: 101.3%;
+  box-sizing: border-box;
 }
 
 .newsletter h2 {
@@ -351,11 +363,12 @@ hr.dotted {
 
 /* form */
 form {
+  width: 80%;
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   border: 3px solid #CEE386;
-  background-color: #FCDFD9; 
+  background-color: #FCDFD9;
   box-sizing: border-box;
   font-family: Georgia, serif;
   color: #4e2d3c;
@@ -369,7 +382,8 @@ label {
   font-family: "Georgia", "Times New Roman", serif;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.6em 0.2em;
   margin-top: 0.5em;
