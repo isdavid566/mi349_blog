@@ -621,16 +621,19 @@ textarea {
   }
 
   .about-image {
-    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
+    padding: 0;
   }
 
   .about-image img {
-    width: 60%;
+    display: flex;
+    width: 100%;
     max-width: 300px;
     height: auto;
     margin: 0 auto;
     float: none;
+    padding: 0;
   }
 }
