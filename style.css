@@ -460,7 +460,7 @@ textarea {
   /* header */
   .header {
     height: 120px;
-    padding-right: 10px;
+    justify-content: center;
   }
 
   #header-box {
@@ -468,6 +468,7 @@ textarea {
     height: auto;
     padding: 10px;
     white-space: nowrap;
+    margin-left: 20px;
   }
 
   #header-box h1 {
