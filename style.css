@@ -618,6 +618,7 @@ textarea {
   .about-text {
     width: 100%;
     text-align: center;
+    margin-bottom: 0px;
   }
 
   .about-image {
