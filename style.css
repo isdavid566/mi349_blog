@@ -406,6 +406,68 @@ textarea {
 }
 
 /* responsive design */
+@media (max-width: 992px) {
+  .container {
+    margin: 0 10px;
+    padding: 20px 10px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* sidebar */
+  .sidebar {
+    flex: 0 0 220px;
+  }
+
+  .container > div:not(.sidebar) {
+    max-width: 650px;
+  }
+
+  /* shrink blog images */
+  .blog-image,
+  .blog-post > img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* font */
+  h2 {
+    font-size: 26px;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  /* header */
+  .header {
+    padding-right: 5%;
+  }
+  #header-box {
+    width: 65%;
+  }
+  #header-box h1 {
+    font-size: 36px;
+  }
+
+  /* nav */
+  .topnav a {
+    padding: 12px;
+    font-size: 20px;
+  }
+
+  /* table */
+  table {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  /* blog */
+  .blog-post {
+    margin: 10px;
+  }
+}
+
+/* mobile */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -430,7 +492,8 @@ textarea {
   .blog-image,
   .blog-post > img {
     float: none !important;
-    margin: 0 auto 15px auto;
+    display: block;
+    margin: auto;
     max-width: 100%;
     height: auto;
   }
@@ -452,7 +515,7 @@ textarea {
   }
 
   .topnav a {
-    font-size: 18px;
+    font-size: 22px;
     padding: 10px;
   }
 
@@ -469,13 +532,13 @@ textarea {
   }
 
   #header-box h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   /* body */
   p {
     margin: 10px;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* blog-post */
@@ -500,16 +563,17 @@ textarea {
     font-size: 24px;
   }
 
+  label {
+    font-size: 20px;
+  }
+
   form {
     width: 90%;
     margin: 0 auto;
     padding: 15px;
   }
-}
 
-  /* about page design responsive */
-@media (max-width: 768px) {
-
+  /* about page */
   .about-content {
     flex-direction: column;
     align-items: center;
@@ -519,7 +583,7 @@ textarea {
   }
 
   .about-image img {
-    width: 90%;
+    width: 100%;
     max-width: 300px;
     height: auto;
     margin: 0 auto;
@@ -528,7 +592,7 @@ textarea {
 
   .about-text p,
   .about-text ul {
-    font-size: 16px;
+    font-size: 20px;
     margin: 10px 0;
     padding: 0 10px;
   }
@@ -540,3 +604,4 @@ textarea {
     margin: 0 auto;
   }
 }
+
