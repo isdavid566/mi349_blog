@@ -467,6 +467,7 @@ textarea {
     width: 100%;
     height: auto;
     padding: 10px;
+    white-space: nowrap;
   }
 
   #header-box h1 {
